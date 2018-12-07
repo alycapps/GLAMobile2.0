@@ -3,10 +3,11 @@ import {Card} from "../../components/Card";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
+// import { List, ListItem } from "../../components/List";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
 import { Input, FormBtn } from "../../components/Form";
-import DeleteBtn from "../../components/DeleteBtn";
+// import DeleteBtn from "../../components/DeleteBtn";
+import Calendar from "../../components/Calendar"
 
 class Stylist extends Component {
   state = {
@@ -106,7 +107,7 @@ class Stylist extends Component {
   render() {
       return(
       <Container>
-        <Row>
+        {/* <Row>
           <Col size="md-3"></Col>
           <Col size="md-6">
             <Card>
@@ -119,7 +120,7 @@ class Stylist extends Component {
           </Col>
           <Col size="md-3"></Col>
           <br/>
-        </Row>
+        </Row> */}
         <br></br>
 
         <Row>
@@ -275,7 +276,10 @@ class Stylist extends Component {
           </div>
         </Row>
         <br></br>
-        
+        <Card title="Upcoming Appointments">
+          <Calendar />
+        </Card>
+        <br></br>
       </Container> 
     );
   }

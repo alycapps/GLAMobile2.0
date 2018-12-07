@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import "./stylistCalendar.css";
 import ReactDOM from "react-dom";
-// import Calendar from "../../components/Calendar"
+import Calendar1 from "../../components/Calendar"
 
 
 // const clients = [ { date: 14, name: "Hardin" } ]
@@ -159,8 +159,9 @@ class Calendar extends React.Component {
   render() {
     return (
       <Container>
+        <br></br>
         <Row>
-          <div className="calendar">
+          {/* <div className="calendar">
             <Card title="Calendar">
               {this.renderHeader()}
               {this.renderDays()}
@@ -187,8 +188,10 @@ class Calendar extends React.Component {
                 <h3>No Appointments Scheduled</h3>
               )}
             </Card>
-          </Col>
+          </Col> */}
+          <Calendar1 />
         </Row>
+        <br></br>
       </Container>
     );
   }
