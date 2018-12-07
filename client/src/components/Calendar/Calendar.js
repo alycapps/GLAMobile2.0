@@ -1,14 +1,5 @@
 import React from "react";
 import dateFns from "date-fns";
-// import { ClientResponse } from "http";
-// import DeleteBtn from "../../components/DeleteBtn";
-// import Jumbotron from "../../components/Jumbotron";
-// import API from "../../utils/API";
-// import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../../components/Grid";
-// import { List, ListItem } from "../../components/List";
-// import { Input, TextArea, FormBtn } from "../../components/Form";
-// import { Input, FormBtn } from "../../components/Form";
 import "./Calendar.css";
 
 class Calendar extends React.Component {

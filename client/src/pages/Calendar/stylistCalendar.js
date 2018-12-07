@@ -1,17 +1,14 @@
 import React from "react";
 import dateFns from "date-fns";
 import { Card } from '../../components/Card';
-// import { ClientResponse } from "http";
 import DeleteBtn from "../../components/DeleteBtn";
-// import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-// import { Input, TextArea, FormBtn } from "../../components/Form";
-// import { Input, FormBtn } from "../../components/Form";
 import "./stylistCalendar.css";
 import ReactDOM from "react-dom";
+// import Calendar from "../../components/Calendar"
+
 
 // const clients = [ { date: 14, name: "Hardin" } ]
 class Calendar extends React.Component {
