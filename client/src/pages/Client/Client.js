@@ -36,7 +36,7 @@ class Client extends Component {
 
   myApptLoad = () => {
     for (let i=0; i<this.state.appointments.length; i++) {
-      if (this.state.appointments[i].month == (this.state.currentMonth.getMonth() + 1) ) {
+      if (this.state.appointments[i].month === (this.state.currentMonth.getMonth() + 1) ) {
       
       }
     }
@@ -46,8 +46,8 @@ class Client extends Component {
     console.log(this.state.appointments)
     for (const s of document.querySelectorAll(".number")) {
       for (var i = 0; i < this.state.appointments.length; i++) {
-        if (this.state.appointments[i].clientId == this.state.client._id){
-          if (this.state.appointments[i].month == (this.state.currentMonth.getMonth() + 1) ) {  
+        if (this.state.appointments[i].clientId === this.state.client._id){
+          if (this.state.appointments[i].month === (this.state.currentMonth.getMonth() + 1) ) {  
             if (s.textContent.includes(this.state.appointments[i].day)) {
               console.log("appt on day " + s.textContent)
               let a = document.createElement("span");
@@ -103,12 +103,14 @@ class Client extends Component {
               {this.state.appointments.length ? (
               <List>
                 {this.state.appointments.map(appointment => (
-                  <ListItem key={appointment._id}>
-                    <p>{appointment.service} on {appointment.month}/{appointment.day}/{appointment.year} at {appointment.time}</p>
-                    <p>{appointment.address}, {appointment.city} {appointment.zipcode}
-                    <DeleteBtn onClick={() => this.deleteAppt(appointment._id)} />
-                    </p> 
-                  </ListItem>
+                  // if(appointment.month > 2) {
+                    <ListItem key={appointment._id}>
+                      <p>{appointment.service} on {appointment.month}/{appointment.day}/{appointment.year} at {appointment.time}</p>
+                      <p>{appointment.address}, {appointment.city} {appointment.zipcode}
+                      <DeleteBtn onClick={() => this.deleteAppt(appointment._id)} />
+                      </p> 
+                    </ListItem>
+                  // }
                 ))}
               </List>
             ) : (

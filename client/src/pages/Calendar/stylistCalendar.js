@@ -1,10 +1,11 @@
 import React from "react";
 import dateFns from "date-fns";
-import { Card } from '../../components/Card';
-import DeleteBtn from "../../components/DeleteBtn";
+// import { Card } from '../../components/Card';
+// import DeleteBtn from "../../components/DeleteBtn";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
+// import { Col, Row, Container } from "../../components/Grid";
+import { Row, Container } from "../../components/Grid";
+// import { List, ListItem } from "../../components/List";
 import "./stylistCalendar.css";
 import ReactDOM from "react-dom";
 import Calendar1 from "../../components/Calendar"
@@ -42,8 +43,8 @@ class Calendar extends React.Component {
     console.log(this.state.appointments)
     for (const s of document.querySelectorAll(".number")) {
       for (var i = 0; i < this.state.appointments.length; i++) {
-        if (this.state.appointments[i].stylistId == this.state.stylist._id){
-          if (this.state.appointments[i].month == (this.state.currentMonth.getMonth() + 1) ) {
+        if (this.state.appointments[i].stylistId === this.state.stylist._id){
+          if (this.state.appointments[i].month === (this.state.currentMonth.getMonth() + 1) ) {
             if (s.textContent.includes(this.state.appointments[i].day)) {
               console.log("appt on day " + s.textContent)
               console.log("appt on day " + s.textContent)

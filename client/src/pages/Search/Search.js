@@ -4,7 +4,7 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
 import { Input, FormBtn } from "../../components/Form";
-// import { Card } from "../../components/Card"
+import { Card } from "../../components/Card"
 import { withRouter } from 'react-router-dom';
 
 
@@ -72,7 +72,7 @@ class Search extends Component {
     return (
       <Container fluid>
         <Row>
-          {/*<Col size="md-6">
+          <Col size="md-4">
             <Card title="Search Criteria">
               <form title="searchBox">
               <label htmlFor="serviceType">Hair</label>
@@ -93,7 +93,7 @@ class Search extends Component {
                   name="serviceType" 
                   value="nails" 
                 />
-                {/* <Input
+                <Input
                   name="minPrice"
                   placeholder="Minimum Price ($)"
                 />
@@ -112,8 +112,8 @@ class Search extends Component {
                 </FormBtn>
               </form>
             </Card>  
-          </Col>*/}
-          <Col size="md-2 sm-12"></Col>
+          </Col>
+          {/* <Col size="md-2 sm-12"></Col> */}
           <Col size="md-8 sm-12">
             <h3>Please select a Stylist to view their profiles and book an appointment.</h3>
             {this.state.stylists.length ? (
@@ -274,7 +274,7 @@ class Search extends Component {
               <h3>No Stylists Found - please try again.</h3>
             )}
           </Col>
-          <Col size="md-2 sm-12"></Col>
+          {/* <Col size="md-2 sm-12"></Col> */}
         </Row>
       </Container>
     );
