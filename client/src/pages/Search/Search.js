@@ -68,12 +68,49 @@ class Search extends Component {
   // handleFormSubmit = event => {
   // };
 
+  // function that filters based on dropdown
+  filter = (event) => {
+    let filterVal = event.target.value;
+    let newStylists = this.state.stylists;
+    console.log(filterVal)
+    newStylists.sort(this.dynamicSort(filterVal))
+    this.setState({ stylists: newStylists})
+    console.log(this.state.stylists)
+  };
+
+  // alphabetizes the newStylists by chosen filter 
+  dynamicSort = (property) => {
+    var sortOrder = 1;
+    if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+    return function (a,b) {
+        if(sortOrder === -1){
+            return b[property].localeCompare(a[property]);
+        }else{
+            return a[property].localeCompare(b[property]);
+        }        
+    }
+  };
+
+
   render() {
     return (
       <Container fluid>
         <Row>
           <Col size="md-4">
-            <Card title="Search Criteria">
+         
+
+
+            <Card title="Filter Search Results:">
+
+              <select name="filter" onChange={this.filter} >
+                <option name= "filter" value="none">Filter By:</option>
+                <option name= "filter" value="firstName">Stylist First Name</option>
+                <option name= "filter" value="lastName">Stylist Last Name</option>
+              </select>
+
               <form title="searchBox">
               <label htmlFor="serviceType">Hair</label>
                 <Input 
