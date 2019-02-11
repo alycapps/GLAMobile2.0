@@ -12,8 +12,6 @@ class SignupForm extends Component {
     super();
     
 		this.state = {
-      // firstName: '',
-      // lastName: '',
       username: '',
       emailAddress: '',
       password: '',
@@ -23,25 +21,24 @@ class SignupForm extends Component {
 		};
   }
   
+  // function that changes the state based on the name of whatever field is being edited
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value
 		});
   }
   
+  // function to handle when user clicks register
 	handleSubmit = (event) => {
 		event.preventDefault();
     // TODO - validate!
     console.log(this.state)
     if (this.state.username && this.state.password && this.state.emailAddress && this.state.userType) {
       AUTH.signup({
-        // firstName: this.state.firstName,
-        // lastName: this.state.lastName,
         username: this.state.username,
         password: this.state.password,
         emailAddress: this.state.emailAddress,
         userType: this.state.userType
-        // userType: this.userType.val()
       }).then(response => {
         console.log(response);
         if (!response.data.errmsg) {
@@ -69,24 +66,9 @@ class SignupForm extends Component {
 		return (
       <Container>
         <Row>
-          {/* <Col size="md-3"></Col> */}
           <Col size="md-5">
             <Card title="Register for GLAMoblie">
               <form style={{marginTop: 10}}>
-                {/* <label htmlFor="username">First name: </label>
-                <Input
-                  type="text"
-                  name="firstName"
-                  value={this.state.firstName}
-                  onChange={this.handleChange}
-                />
-                <label htmlFor="username">Last name: </label>
-                <Input
-                  type="text"
-                  name="lastName"
-                  value={this.state.lastName}
-                  onChange={this.handleChange}
-                /> */}
                 <label htmlFor="username">Username: </label>
                 <Input
                   type="text"
@@ -117,12 +99,6 @@ class SignupForm extends Component {
                 />
                 <label htmlFor="userType">Profile Type: </label>
                 <br></br>
-                {/* <Input
-                  type="text"
-                  name="userType"
-                  value={this.state.userType}
-                  onChange={this.handleChange}
-                /> */}
                 <select name="userType" onChange={this.handleChange} >
                   <option name= "userType" value="none">Please select profile type.</option>
                   <option name= "userType" value="client">Client</option>

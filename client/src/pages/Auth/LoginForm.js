@@ -16,14 +16,16 @@ class LoginForm extends Component {
       emailAddress: '',
 			redirectTo: null
 		};
-	}
-
+  }
+  
+  // function that changes the state based on the name of whatever field is being edited
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value
 		});
 	}
 
+  // function to handle when user clicks signin
 	handleSubmit = (event) => {
 		event.preventDefault();
 		console.log('handleSubmit');
