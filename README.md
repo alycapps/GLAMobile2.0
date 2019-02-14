@@ -2,7 +2,7 @@
 # =====================
 ## *GLAMobile makes it easier than ever!*
 
-![haters](https://2.bp.blogspot.com/-viq-LLKAVbs/UYKw6RVo7bI/AAAAAAAAJXQ/4lXWt9T6iVk/s1600/haters_gonna_hate.jpg)
+Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
 
 ### Need style in your life?
 > Clients are able to login and search through registered stylists and book their services. Upon booking clients give the location services will be needed, making this application especially helpful for events such as weddings or recitals!
@@ -19,4 +19,4 @@
 
 ## Acknowledgments
 
-  *Shout out to UNC Coding Boot Camp for inspiring us to create this App!*
+*Shout out to UNC Coding Boot Camp for inspiring us to create this App!*

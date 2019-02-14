@@ -29,7 +29,7 @@ class Search extends Component {
   loadStylists = () => {
     API.getStylists()
       .then(res =>
-        this.setState({ stylists: res.data, emailAddress: "", username: "", password: "" }),
+        this.setState({ stylists: res.data }),
         console.log(this.state.stylists)
         )
       .catch(err => console.log(err));
@@ -92,6 +92,9 @@ class Search extends Component {
             return a[property].localeCompare(b[property]);
         }        
     }
+    // if(a.property < b.property) { return -1; }
+    // if(a.firstname > b.firstname) { return 1; }
+    // return 0;
   };
 
 
@@ -99,11 +102,9 @@ class Search extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-4">
-         
+          {/* <Col size="md-4">    */}
 
-
-            <Card title="Filter Search Results:">
+            {/* <Card title="Filter Search Results:">
 
               <select name="filter" onChange={this.filter} >
                 <option name= "filter" value="none">Filter By:</option>
@@ -148,10 +149,10 @@ class Search extends Component {
                   Search
                 </FormBtn>
               </form>
-            </Card>  
-          </Col>
+            </Card>   */}
+          {/* </Col> */}
           {/* <Col size="md-2 sm-12"></Col> */}
-          <Col size="md-8 sm-12">
+          <Col size="md-12 sm-12">
             <h3>Please select a Stylist to view their profiles and book an appointment.</h3>
             {this.state.stylists.length ? (
                 <div className="accordion" id="accordionExample">
@@ -160,7 +161,7 @@ class Search extends Component {
                       <div className="card-header" id="headingOne" style={{backgroundColor:"#c8b7b5"}}>
                         <h5 className="mb-0">
                           <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            {stylist.username}
+                            {stylist.firstName} {stylist.lastName}
                           </button>
                         </h5>
                       </div>
@@ -304,6 +305,7 @@ class Search extends Component {
                         </div>
                       </div>
                     </div>               
+                  
                   
                   ))}
                 </div>
