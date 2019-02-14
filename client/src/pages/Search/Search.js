@@ -102,9 +102,9 @@ class Search extends Component {
     return (
       <Container fluid>
         <Row>
-          {/* <Col size="md-4">    */}
+          <Col size="md-4">   
 
-            {/* <Card title="Filter Search Results:">
+            <Card title="Filter Search Results:">
 
               <select name="filter" onChange={this.filter} >
                 <option name= "filter" value="none">Filter By:</option>
@@ -149,10 +149,10 @@ class Search extends Component {
                   Search
                 </FormBtn>
               </form>
-            </Card>   */}
-          {/* </Col> */}
+            </Card>  
+          </Col>
           {/* <Col size="md-2 sm-12"></Col> */}
-          <Col size="md-12 sm-12">
+          <Col size="md-8 sm-12">
             <h3>Please select a Stylist to view their profiles and book an appointment.</h3>
             {this.state.stylists.length ? (
                 <div className="accordion" id="accordionExample">
