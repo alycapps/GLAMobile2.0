@@ -1,4 +1,4 @@
-# Don't be jealous. Be Glamorous!
+# Be Glamorous, wherever you want!
 # =====================
 ## *GLAMobile makes it easier than ever!*
 
@@ -20,3 +20,6 @@ Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
 ## Acknowledgments
 
 *Shout out to UNC Coding Boot Camp for inspiring us to create this App!*
+
+##Technologies used
+React.js, Bootstrap, JavaScript, HTML, CSS
