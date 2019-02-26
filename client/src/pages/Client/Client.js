@@ -96,7 +96,7 @@ class Client extends Component {
 
   render() {
     return (
-      <Container fluid class="background">
+      <Container fluid>
         <Row>
           <Col size="md-7">
             <form>
