@@ -7,7 +7,8 @@ import { Col, Row, Container } from "../../components/Grid";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
 import { Input, FormBtn } from "../../components/Form";
 // import DeleteBtn from "../../components/DeleteBtn";
-import Calendar from "../../components/Calendar"
+import Calendar from "../../components/Calendar";
+import "./stylist.css";
 
 class Stylist extends Component {
   state = {

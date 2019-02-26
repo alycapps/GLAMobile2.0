@@ -8,6 +8,7 @@ import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from '../../components/Form';
 import Calendar from "../../components/Calendar"
 import ReactDOM from "react-dom";
+import "./client.css"
 
 class Client extends Component {
   state = {
@@ -95,7 +96,7 @@ class Client extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container fluid class="background">
         <Row>
           <Col size="md-7">
             <form>
