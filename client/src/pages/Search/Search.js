@@ -102,7 +102,8 @@ class Search extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-4">   
+        <Col size="md-2"></Col>
+          {/* <Col size="md-4">   
 
             <Card title="Filter Search Results:">
 
@@ -150,14 +151,14 @@ class Search extends Component {
                 </FormBtn>
               </form>
             </Card>  
-          </Col>
+          </Col> */}
           {/* <Col size="md-2 sm-12"></Col> */}
-          <Col size="md-8 sm-12">
+          <Col size="md-8 sm-8">
             <h3>Please select a Stylist to view their profiles and book an appointment.</h3>
             {this.state.stylists.length ? (
-                <div className="accordion" id="accordionExample">
+                <div className="accordion" id="accordionExample" >
                   {this.state.stylists.map( stylist => (
-                    <div className="card">
+                    <div className="card" style={{backgroundColor: 'rgba(255,255,255,0.95)'}}>
                       <div className="card-header" id="headingOne" style={{backgroundColor:"#c8b7b5"}}>
                         <h5 className="mb-0">
                           <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -313,7 +314,7 @@ class Search extends Component {
               <h3>No Stylists Found - please try again.</h3>
             )}
           </Col>
-          {/* <Col size="md-2 sm-12"></Col> */}
+          <Col size="md-2 sm-12"></Col>
         </Row>
       </Container>
     );
