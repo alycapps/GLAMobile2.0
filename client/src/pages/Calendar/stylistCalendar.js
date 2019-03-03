@@ -1,11 +1,7 @@
 import React from "react";
 import dateFns from "date-fns";
-// import { Card } from '../../components/Card';
-// import DeleteBtn from "../../components/DeleteBtn";
 import API from "../../utils/API";
-// import { Col, Row, Container } from "../../components/Grid";
 import { Row, Container } from "../../components/Grid";
-// import { List, ListItem } from "../../components/List";
 import "./stylistCalendar.css";
 import ReactDOM from "react-dom";
 import Calendar1 from "../../components/Calendar"

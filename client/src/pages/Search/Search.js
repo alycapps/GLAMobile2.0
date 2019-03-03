@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-// import { Input, TextArea, FormBtn } from "../../components/Form";
 import { Input, FormBtn } from "../../components/Form";
 import { Card } from "../../components/Card"
 import { withRouter } from 'react-router-dom';
@@ -33,25 +31,17 @@ class Search extends Component {
           this.clearStylistsNoData)
       )
       .catch(err => console.log(err));
-      console.log(this.state.stylists)
-
   };
 
   // function to remove any stylists that do not have a firstName or lastName
   clearStylistsNoData = () => {
-    console.log(this.state.stylists)
-    console.log("stylists above")
     let stylistWithData=[]
-
     this.state.stylists.map(stylist => {
       if( stylist.firstName && stylist.lastName) {
-        console.log(stylist.firstName + "firstName")
         stylistWithData.push(stylist)
       }
     })
-      this.setState({ stylists: stylistWithData })
-    console.log(stylistWithData)
-    console.log("----stylist no data----")
+    this.setState({ stylists: stylistWithData })
   }
 
   handleInputChange = event => {
@@ -84,17 +74,12 @@ class Search extends Component {
     });
   };
 
-
   // function that filters based on dropdown based on chosen value
   filter = (event) => {
     let filterVal = event.target.value;
     let newStylists = this.state.stylists;
-    console.log(this.state.stylists)
-    console.log("stylists above")
-    console.log(filterVal + " filter value")
     newStylists.sort(this.dynamicSort(filterVal))
     this.setState({ stylists: newStylists})
-    console.log(this.state.stylists)
   };
 
   // alphabetizes the newStylists by chosen filter 

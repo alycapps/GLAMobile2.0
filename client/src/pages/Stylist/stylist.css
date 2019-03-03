@@ -10,3 +10,13 @@ body, html, #root, .App {
   background-repeat: repeat; 
   background-size: cover;
 }
+
+
+/* .App {
+  height: 100%;
+  background-color: black;
+  background-image: url("lipstick.jpg");
+  background-position: center; 
+  background-repeat: repeat; 
+  background-size: cover;
+} */
