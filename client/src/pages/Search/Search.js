@@ -29,11 +29,30 @@ class Search extends Component {
   loadStylists = () => {
     API.getStylists()
       .then(res =>
-        this.setState({ stylists: res.data }),
-        console.log(this.state.stylists)
-        )
+        this.setState({ stylists: res.data },
+          this.clearStylistsNoData)
+      )
       .catch(err => console.log(err));
+      console.log(this.state.stylists)
+
   };
+
+  // function to remove any stylists that do not have a firstName or lastName
+  clearStylistsNoData = () => {
+    console.log(this.state.stylists)
+    console.log("stylists above")
+    let stylistWithData=[]
+
+    this.state.stylists.map(stylist => {
+      if( stylist.firstName && stylist.lastName) {
+        console.log(stylist.firstName + "firstName")
+        stylistWithData.push(stylist)
+      }
+    })
+      this.setState({ stylists: stylistWithData })
+    console.log(stylistWithData)
+    console.log("----stylist no data----")
+  }
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -65,14 +84,14 @@ class Search extends Component {
     });
   };
 
-  // handleFormSubmit = event => {
-  // };
 
-  // function that filters based on dropdown
+  // function that filters based on dropdown based on chosen value
   filter = (event) => {
     let filterVal = event.target.value;
     let newStylists = this.state.stylists;
-    console.log(filterVal)
+    console.log(this.state.stylists)
+    console.log("stylists above")
+    console.log(filterVal + " filter value")
     newStylists.sort(this.dynamicSort(filterVal))
     this.setState({ stylists: newStylists})
     console.log(this.state.stylists)
@@ -92,9 +111,6 @@ class Search extends Component {
             return a[property].localeCompare(b[property]);
         }        
     }
-    // if(a.property < b.property) { return -1; }
-    // if(a.firstname > b.firstname) { return 1; }
-    // return 0;
   };
 
 
@@ -104,7 +120,7 @@ class Search extends Component {
         <Row>
           {/* Col for search box */}
           <Col size="md-4">   
-
+            <br />
             <Card title="Filter Search Results:">
               <select name="filter" onChange={this.filter} >
                 <option name= "filter" value="none">Filter By:</option>
@@ -112,7 +128,7 @@ class Search extends Component {
                 <option name= "filter" value="lastName">Stylist Last Name</option>
               </select>
 
-              <form title="searchBox">
+              {/* <form title="searchBox">
               <label htmlFor="serviceType">Hair</label>
                 <Input 
                   type="checkbox" 
@@ -148,17 +164,18 @@ class Search extends Component {
                 >
                   Search
                 </FormBtn>
-              </form>
+              </form> */}
+
             </Card>  
           </Col>
 
-          {/* Col for results */}
+          {/* Col for stylists results */}
           <Col size="md-8 sm-8">
             <h3>Please select a Stylist to view their profiles and book an appointment.</h3>
             {this.state.stylists.length ? (
                 <div className="accordion" id="accordionExample" >
                   {this.state.stylists.map( stylist => (
-                    <div className="card" style={{backgroundColor: 'rgba(255,255,255,0.95)'}}>
+                    <div key={stylist._id} className="card" style={{backgroundColor: 'rgba(255,255,255,0.95)'}}>
                       <div className="card-header" id="headingOne" style={{backgroundColor:"#c8b7b5"}}>
                         <h5 className="mb-0">
                           <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{color:"black"}}>
@@ -246,7 +263,6 @@ class Search extends Component {
                                   <br></br>
                                   <select name="year" onChange={this.handleInputChange} >
                                     <option name= "year" value="none">Please select Year</option>
-                                    <option name= "year" value="2018">2018</option>
                                     <option name= "year" value="2019">2019</option>
                                     <option name= "year" value="2020">2020</option>
                                     <option name= "year" value="2021">2021</option>

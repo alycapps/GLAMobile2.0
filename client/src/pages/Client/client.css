@@ -2,7 +2,7 @@ body, html, #root, .App {
   height: 100%;
 }
 
-#root {
+.App {
   height: 100%;
   background-color: black;
   background-image: url("lipstick.jpg");
