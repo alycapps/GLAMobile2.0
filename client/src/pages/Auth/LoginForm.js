@@ -31,7 +31,7 @@ class LoginForm extends Component {
 		event.preventDefault();
 		console.log('handleSubmit');
 		this.props.login(this.state.username, this.state.password);
-    if (this.state.username && this.state.password && this.state.emailAddress) {
+    if (this.state.password && this.state.emailAddress) {
       this.setState({
         redirectTo: '/'
       });

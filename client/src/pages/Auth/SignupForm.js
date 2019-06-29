@@ -34,7 +34,7 @@ class SignupForm extends Component {
 		event.preventDefault();
     // TODO - validate!
     console.log(this.state)
-    if (this.state.username && this.state.password && this.state.emailAddress && this.state.userType) {
+    if (this.state.password && this.state.emailAddress && this.state.userType) {
       AUTH.signup({
         username: this.state.username,
         password: this.state.password,
@@ -50,6 +50,7 @@ class SignupForm extends Component {
         } else {
           console.log('duplicate');
           console.log(response.data.errmsg)
+          this.setState({alertMessage: "There was an error registering, please try again"})
         }
       });
     }
