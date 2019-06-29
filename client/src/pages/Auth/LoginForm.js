@@ -14,7 +14,8 @@ class LoginForm extends Component {
 			username: '',
       password: '',
       emailAddress: '',
-			redirectTo: null
+      redirectTo: null,
+      alertMessage: ''
 		};
   }
   
@@ -30,9 +31,14 @@ class LoginForm extends Component {
 		event.preventDefault();
 		console.log('handleSubmit');
 		this.props.login(this.state.username, this.state.password);
-		this.setState({
-			redirectTo: '/'
-		});
+    if (this.state.username && this.state.password && this.state.emailAddress) {
+      this.setState({
+        redirectTo: '/'
+      });
+    }
+    else {
+      this.setState({alertMessage: "Please enter all fields"})
+    }
 	}
 
 	render() {
@@ -42,9 +48,16 @@ class LoginForm extends Component {
 			return (
 				<Container className="loginPage">
           <Row>
-            {/* <Col size="md-3"></Col> */}
             <Col size="md-5">
               <Card title="Login to GLAMobile">
+
+                {/* Alert message if error with login */}
+                {this.state.alertMessage.length ? (
+                    <h4 style={{color:"red"}}>{this.state.alertMessage}</h4>
+                  ) : (
+                    ""
+                )}
+
                 <form style={{marginTop: 10}}>
                   <label htmlFor="username">Username: </label>
                   <Input

@@ -17,7 +17,8 @@ class SignupForm extends Component {
       password: '',
       confirmPassword: '',
       userType: '',
-			redirectTo: null
+      redirectTo: null,
+      alertMessage: ''
 		};
   }
   
@@ -53,7 +54,8 @@ class SignupForm extends Component {
       });
     }
     else {
-      alert("Please enter all fields")
+      // alert("Please enter all fields")
+      this.setState({alertMessage: "Please enter all fields"})
     }
 		
   }
@@ -68,6 +70,14 @@ class SignupForm extends Component {
         <Row>
           <Col size="md-5">
             <Card title="Register for GLAMoblie">
+
+              {/* Alert message if error in registration */}
+              {this.state.alertMessage.length ? (
+                  <h4 style={{color:"red"}}>{this.state.alertMessage}</h4>
+                ) : (
+                  ""
+              )}
+
               <form style={{marginTop: 10}}>
                 <label htmlFor="username">Username: </label>
                 <Input
