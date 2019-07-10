@@ -6,12 +6,13 @@ const appointmentsSchema = new Schema({
   address: { type: String, required: false },
   city: { type: String, required: false },
   zipCode: { type: String, required: false },
-  month: { type: String, required: false },
-  day: { type: Number, required: false },
-  year: { type: Number, required: false },
+  // month: { type: String, required: false },
+  // day: { type: Number, required: false },
+  // year: { type: Number, required: false },
   time: { type: String, required: false },
   clientId: {type: Schema.Types.ObjectId, ref: 'User'},
-  stylistId: {type: Schema.Types.ObjectId, ref: 'User'}
+  stylistId: {type: Schema.Types.ObjectId, ref: 'User'},
+  date: {type: Date, required: true}
 });
 
 const Appointments = mongoose.model("Appointment", appointmentsSchema);

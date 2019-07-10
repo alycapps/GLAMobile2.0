@@ -4,7 +4,8 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import { Card } from "../../components/Card"
 import { withRouter } from 'react-router-dom';
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 class Search extends Component {
   state = {
@@ -17,7 +18,8 @@ class Search extends Component {
     month: "",
     day: "",
     year: "",
-    clientId: this.props.user._id
+    clientId: this.props.user._id,
+    date: new Date()
   };
 
   componentDidMount() {
@@ -52,6 +54,13 @@ class Search extends Component {
     console.log(this.state)
   };
 
+  // only for datepicker field - does the same as above funciton need to fix
+  handleChange = date => {
+    this.setState({
+      date: date
+    });
+  };
+
   bookAppt = stylistId => {
     // function to add appt info to mongoose
     console.log('CLICKED')
@@ -61,13 +70,14 @@ class Search extends Component {
       address: this.state.address,
       city: this.state.city,
       zipcode: this.state.zipcode,
-      month: this.state.month,
-      day: this.state.day,
-      year: this.state.year,
+      // month: this.state.month,
+      // day: this.state.day,
+      // year: this.state.year,
       time: this.state.time,
       service: this.state.service,
       clientId: this.state.clientId,
-      stylistId: stylistId    
+      stylistId: stylistId,
+      date: new Date()    
     }
     API.saveAppt(apptInfo).then(res => {
         console.log(res, "This is the response from appointment info");
@@ -97,6 +107,7 @@ class Search extends Component {
         }        
     }
   };
+  
 
 
   render() {
@@ -189,7 +200,7 @@ class Search extends Component {
                                 </div>
                                 <div className="modal-body">
                                   <form>
-                                  <label htmlFor="month">Month: </label>
+                                  {/* <label htmlFor="month">Month: </label>
                                   <br></br>
                                   <select name="month" onChange={this.handleInputChange} >
                                     <option name= "month" value="none">Please select Month</option>
@@ -259,7 +270,19 @@ class Search extends Component {
                                     <option name= "year" value="2027">2027</option>
                                     <option name= "year" value="2028">2028</option>
                                   </select>
-                                  <br></br>
+                                  <br></br> */}
+
+
+                                  <label htmlFor="date">Date: </label>
+                                  <br/>
+                                  <DatePicker
+                                    
+                                    selected={this.state.date}
+                                    onChange={this.handleChange}
+                                  />
+                                  <br/>
+
+
                                   <label htmlFor="Time">Time: </label>
                                   <Input
                                     type="time"
@@ -295,6 +318,7 @@ class Search extends Component {
                                     placeholder="Zip Code"
                                     onChange={this.handleInputChange}
                                   />
+
                                   </form>
                                 </div>
                                 <div className="modal-footer">
