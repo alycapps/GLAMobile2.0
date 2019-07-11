@@ -9,6 +9,8 @@ import { Input, FormBtn } from '../../components/Form';
 import Calendar from "../../components/Calendar"
 import ReactDOM from "react-dom";
 import "./client.css"
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 class Client extends Component {
   state = {
@@ -106,8 +108,13 @@ class Client extends Component {
                 {this.state.appointments.map(appointment => (
                   // if(appointment.month > 2) {
                     <ListItem key={appointment._id}>
-                      <p>{appointment.service} on {appointment.date}</p>
+                      <p>{appointment.service} appointment on 
+                        <Moment format=" MMM DD, YYYY">
+                          {appointment.date}
+                        </Moment>
+                      </p>
                       <p>{appointment.address}, {appointment.city} {appointment.zipcode}
+                      
                       <DeleteBtn onClick={() => this.deleteAppt(appointment._id)} />
                       </p> 
                     </ListItem>
