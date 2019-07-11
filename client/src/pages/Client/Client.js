@@ -106,7 +106,7 @@ class Client extends Component {
                 {this.state.appointments.map(appointment => (
                   // if(appointment.month > 2) {
                     <ListItem key={appointment._id}>
-                      <p>{appointment.service} on {appointment.month}/{appointment.day}/{appointment.year} at {appointment.time}</p>
+                      <p>{appointment.service} on {appointment.date}</p>
                       <p>{appointment.address}, {appointment.city} {appointment.zipcode}
                       <DeleteBtn onClick={() => this.deleteAppt(appointment._id)} />
                       </p> 

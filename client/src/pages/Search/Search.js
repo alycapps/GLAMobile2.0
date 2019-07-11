@@ -70,10 +70,7 @@ class Search extends Component {
       address: this.state.address,
       city: this.state.city,
       zipcode: this.state.zipcode,
-      // month: this.state.month,
-      // day: this.state.day,
-      // year: this.state.year,
-      time: this.state.time,
+      // time: this.state.time,
       service: this.state.service,
       clientId: this.state.clientId,
       stylistId: stylistId,
@@ -200,96 +197,34 @@ class Search extends Component {
                                 </div>
                                 <div className="modal-body">
                                   <form>
-                                  {/* <label htmlFor="month">Month: </label>
-                                  <br></br>
-                                  <select name="month" onChange={this.handleInputChange} >
-                                    <option name= "month" value="none">Please select Month</option>
-                                    <option name= "month" value="1">January</option>
-                                    <option name= "month" value="2">February</option>
-                                    <option name= "month" value="3">March</option>
-                                    <option name= "month" value="4">April</option>
-                                    <option name= "month" value="5">May</option>
-                                    <option name= "month" value="6">June</option>
-                                    <option name= "month" value="7">July</option>
-                                    <option name= "month" value="8">August</option>
-                                    <option name= "month" value="9">September</option>
-                                    <option name= "month" value="10">October</option>
-                                    <option name= "month" value="11">November</option>
-                                    <option name= "month" value="12">December</option>
-                                  </select>
-                                  <br></br>
-                                  <label htmlFor="day">Day: </label>
-                                  <br></br>
-                                   <select name="day" onChange={this.handleInputChange} >
-                                    <option name= "day" value="none">Please select Day</option>
-                                    <option name= "day" value="1">1</option>
-                                    <option name= "day" value="2">2</option>
-                                    <option name= "day" value="3">3</option>
-                                    <option name= "day" value="4">4</option>
-                                    <option name= "day" value="5">5</option>
-                                    <option name= "day" value="6">6</option>
-                                    <option name= "day" value="7">7</option>
-                                    <option name= "day" value="8">8</option>
-                                    <option name= "day" value="9">9</option>
-                                    <option name= "day" value="10">10</option>
-                                    <option name= "day" value="11">11</option>
-                                    <option name= "day" value="12">12</option>
-                                    <option name= "day" value="13">13</option>
-                                    <option name= "day" value="14">14</option>
-                                    <option name= "day" value="15">15</option>
-                                    <option name= "day" value="16">16</option>
-                                    <option name= "day" value="17">17</option>
-                                    <option name= "day" value="18">18</option>
-                                    <option name= "day" value="19">19</option>
-                                    <option name= "day" value="20">20</option>
-                                    <option name= "day" value="21">21</option>
-                                    <option name= "day" value="22">22</option>
-                                    <option name= "day" value="23">23</option>
-                                    <option name= "day" value="24">24</option>
-                                    <option name= "day" value="25">25</option>
-                                    <option name= "day" value="26">26</option>
-                                    <option name= "day" value="27">27</option>
-                                    <option name= "day" value="28">28</option>
-                                    <option name= "day" value="29">29</option>
-                                    <option name= "day" value="30">30</option>
-                                    <option name= "day" value="31">31</option>
-                                  </select>
-                                  <br></br>
-                                  <label htmlFor="year">Year: </label>
-                                  <br></br>
-                                  <select name="year" onChange={this.handleInputChange} >
-                                    <option name= "year" value="none">Please select Year</option>
-                                    <option name= "year" value="2019">2019</option>
-                                    <option name= "year" value="2020">2020</option>
-                                    <option name= "year" value="2021">2021</option>
-                                    <option name= "year" value="2022">2022</option>
-                                    <option name= "year" value="2023">2023</option>
-                                    <option name= "year" value="2024">2024</option>
-                                    <option name= "year" value="2025">2025</option>
-                                    <option name= "year" value="2026">2026</option>
-                                    <option name= "year" value="2027">2027</option>
-                                    <option name= "year" value="2028">2028</option>
-                                  </select>
-                                  <br></br> */}
-
 
                                   <label htmlFor="date">Date: </label>
                                   <br/>
                                   <DatePicker
-                                    
                                     selected={this.state.date}
                                     onChange={this.handleChange}
-                                  />
-                                  <br/>
+                                    showTimeSelect
+                                    timeFormat="HH:mm"
+                                    timeIntervals={30}
+                                    dateFormat="MMMM d, yyyy h:mm aa"
+                                    timeCaption="time"
+                                    minDate={new Date()}
+                                  >
+                                    {/* <div style={{color: 'red'}}>
+                                      Appointments must be 24 hours out
+                                    </div> */}
+                                  </DatePicker>
+                                  
+                                  <br/><br/>
 
 
-                                  <label htmlFor="Time">Time: </label>
+                                  {/* <label htmlFor="Time">Time: </label>
                                   <Input
                                     type="time"
                                     name="time"
                                     onChange={this.handleInputChange}
                                     placeholder= "Time"
-                                  />
+                                  /> */}
                                   <label htmlFor="service">Service Requested: </label>
                                   <Input
                                     type="text"
