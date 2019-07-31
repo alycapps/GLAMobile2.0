@@ -23,3 +23,7 @@ Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
 
 ##Technologies used
 React.js, Bootstrap, JavaScript, HTML, CSS
+
+##Install Directions
+Perform a npm install
+To run "yarn start"
