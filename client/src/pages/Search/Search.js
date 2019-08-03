@@ -200,31 +200,20 @@ class Search extends Component {
 
                                   <label htmlFor="date">Date: </label>
                                   <br/>
-                                  <DatePicker
-                                    selected={this.state.date}
-                                    onChange={this.handleChange}
-                                    showTimeSelect
-                                    timeFormat="HH:mm"
-                                    timeIntervals={30}
-                                    dateFormat="MMMM d, yyyy h:mm aa"
-                                    timeCaption="time"
-                                    minDate={new Date()}
-                                  >
-                                    {/* <div style={{color: 'red'}}>
-                                      Appointments must be 24 hours out
-                                    </div> */}
-                                  </DatePicker>
-                                  
+                                    <DatePicker
+                                      selected={this.state.date}
+                                      onChange={this.handleChange}
+                                      showTimeSelect
+                                      timeFormat="HH:mm"
+                                      timeIntervals={30}
+                                      dateFormat="MMMM d, yyyy h:mm aa"
+                                      timeCaption="time"
+                                      minDate={new Date()}
+                                      className="form-control"
+                                    >
+                                    </DatePicker>
                                   <br/><br/>
 
-
-                                  {/* <label htmlFor="Time">Time: </label>
-                                  <Input
-                                    type="time"
-                                    name="time"
-                                    onChange={this.handleInputChange}
-                                    placeholder= "Time"
-                                  /> */}
                                   <label htmlFor="service">Service Requested: </label>
                                   <Input
                                     type="text"
