@@ -29,5 +29,7 @@ Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
 * CSS
 
 ## Install Directions
+Must have mongodb installed
+Must have node.js installed
 Perform a npm install
 To run "yarn start"
