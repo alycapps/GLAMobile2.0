@@ -21,9 +21,9 @@ Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
 
 *Shout out to UNC Coding Boot Camp for inspiring us to create this App!*
 
-##Technologies used
+## Technologies used
 React.js, Bootstrap, JavaScript, HTML, CSS
 
-##Install Directions
+## Install Directions
 Perform a npm install
 To run "yarn start"
