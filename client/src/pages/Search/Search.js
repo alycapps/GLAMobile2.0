@@ -6,6 +6,7 @@ import { Card } from "../../components/Card"
 import { withRouter } from 'react-router-dom';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./search.css"
 
 class Search extends Component {
   state = {
@@ -212,7 +213,7 @@ class Search extends Component {
                                       className="form-control"
                                     >
                                     </DatePicker>
-                                  <br/><br/>
+                                  <br/>
 
                                   <label htmlFor="service">Service Requested: </label>
                                   <Input
