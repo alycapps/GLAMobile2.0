@@ -2,8 +2,6 @@
 # =====================
 ## *GLAMobile makes it easier than ever!*
 
-Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
-
 ### Need style in your life?
 > Clients are able to login and search through registered stylists and book their services. Upon booking clients give the location services will be needed, making this application especially helpful for events such as weddings or recitals!
 
@@ -33,3 +31,6 @@ Must have mongodb installed
 Must have node.js installed
 Perform a npm install
 To run "yarn start"
+
+
+Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
