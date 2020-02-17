@@ -106,8 +106,6 @@ class Search extends Component {
     }
   };
   
-
-
   render() {
     return (
       <Container fluid>

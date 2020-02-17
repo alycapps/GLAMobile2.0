@@ -43,7 +43,7 @@ class Client extends Component {
       
       }
     }
-  }
+  };
   
   addtoCalendar = () => {
     console.log(this.state.appointments)
