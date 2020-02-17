@@ -92,7 +92,7 @@ class App extends Component {
 								<Route exact path="/stylist" component={() => <Stylist user={this.state.user}/>} />
 								<Route exact path="/stylist/:id" component={Detail} />
 								<Route exact path="/calendar" component={() => <Calendar user={this.state.user}/>} />
-                <Route component={NoMatch} />
+                {/* <Route component={NoMatch} /> */}
               </Switch>
             </div>
           </div>
