@@ -132,27 +132,27 @@ class Client extends Component {
             </form>
           </Col>
           <Col size="md-5 sm-12">
-          <div>
-            <Card title="My Profile">
-              First Name: {this.state.firstName ? 
-                (this.state.firstName): 
+            <div>
+              <Card title="My Profile">
+                First Name: {this.state.firstName ? 
+                  (this.state.firstName): 
+                  (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
+                <br></br>
+                Last Name: {this.state.lastName ? 
+                  (this.state.lastName): 
+                  (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
+                <br></br>
+                Username: {this.state.username ? 
+                (this.state.username): 
                 (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
-              <br></br>
-              Last Name: {this.state.lastName ? 
-                (this.state.lastName): 
-                (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
-              <br></br>
-              Username: {this.state.username ? 
-              (this.state.username): 
-              (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
-              <br></br>
-              Email: {this.state.emailAddress ? 
-                (this.state.emailAddress): 
-                (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
-              <br></br>
-              <FormBtn data-toggle="modal" data-target="#exampleModal">
-                Edit Profile
-              </FormBtn>
+                <br></br>
+                Email: {this.state.emailAddress ? 
+                  (this.state.emailAddress): 
+                  (<span style={{color:"red"}}>Unknown -- Please Add</span>)}
+                <br></br>
+                <FormBtn data-toggle="modal" data-target="#exampleModal">
+                  Edit Profile
+                </FormBtn>
               </Card>
             <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog" role="document">
@@ -165,34 +165,34 @@ class Client extends Component {
                   </div>
                   <div className="modal-body">
                     <form>
-                    <label htmlFor="firstName">First Name: </label>
-                    <Input
-                      type="text"
-                      name="firstName"
-                      onChange={this.handleInputChange}
-                      placeholder= {this.state.client.firstName}
-                    />
-                    <label htmlFor="lastName">Last Name: </label>
-                    <Input
-                      type="text"
-                      name="lastName"
-                      placeholder={this.state.client.lastName}
-                      onChange={this.handleInputChange}
-                    />
-                    <label htmlFor="username">Username: </label>
-                    <Input
-                      type="text"
-                      name="username"
-                      placeholder={this.state.client.username}
-                      onChange={this.handleInputChange}
-                    />
-                    <label htmlFor="emailAddress">Email: </label>
-                    <Input
-                      type="text"
-                      name="emailAddress"
-                      placeholder={this.state.client.emailAddress}
-                      onChange={this.handleInputChange}
-                    />
+                      <label htmlFor="firstName">First Name: </label>
+                      <Input
+                        type="text"
+                        name="firstName"
+                        onChange={this.handleInputChange}
+                        placeholder= {this.state.client.firstName}
+                      />
+                      <label htmlFor="lastName">Last Name: </label>
+                      <Input
+                        type="text"
+                        name="lastName"
+                        placeholder={this.state.client.lastName}
+                        onChange={this.handleInputChange}
+                      />
+                      <label htmlFor="username">Username: </label>
+                      <Input
+                        type="text"
+                        name="username"
+                        placeholder={this.state.client.username}
+                        onChange={this.handleInputChange}
+                      />
+                      <label htmlFor="emailAddress">Email: </label>
+                      <Input
+                        type="text"
+                        name="emailAddress"
+                        placeholder={this.state.client.emailAddress}
+                        onChange={this.handleInputChange}
+                      />
                     </form>
                   </div>
                   <div className="modal-footer">
