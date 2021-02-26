@@ -3,7 +3,7 @@ const db = require("../models");
 
 // This file empties the user accounts to add news ones for testing
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist-auth");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/glammobile");
 
 const userSeed = [
   {
