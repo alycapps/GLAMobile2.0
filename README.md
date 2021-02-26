@@ -1,5 +1,4 @@
 # Be Glamorous, wherever you want!
-# =====================
 ## *GLAMobile makes it easier than ever!*
 
 ### Need style in your life?
@@ -15,10 +14,6 @@
 * Hardin Ross (https://github.com/heross91)
 * Mike Stewart (https://github.com/DjangoJuice)
 
-## Acknowledgments
-
-*Shout out to UNC Coding Boot Camp for inspiring us to create this App!*
-
 ## Technologies used
 * React.js
 * Bootstrap
@@ -30,7 +25,7 @@
 * Must have mongodb installed
 * Must have node.js installed
 * Perform a npm install
-* To run "yarn start"
+* To run use either "yarn start" or "npm start"
 
 
 Please visit the deployed site at https://pacific-springs-70065.herokuapp.com/
