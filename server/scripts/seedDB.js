@@ -7,28 +7,28 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/glammobile");
 
 const userSeed = [
   {
-    username: "mike",
+    username: "client1",
     password: "password123",
-    emailAddress: "mike@email.com",
+    emailAddress: "client1@email.com",
     userType: "client"
     //date: new Date(Date.now())
   },
   {
-    username: "hardin",
+    username: "client2",
     password: "password123",
-    emailAddress: "hardin@email.com",
+    emailAddress: "client2@email.com",
     userType: "client"
   },
   {
-    username: "alyssa",
+    username: "stylist1",
     password: "password123",
-    emailAddress: "alyssa@email.com",
+    emailAddress: "stylist1@email.com",
     userType: "stylist"
   },
   {
-    username: "lacey",
+    username: "stylist2",
     password: "password123",
-    emailAddress: "lacey@email.com",
+    emailAddress: "stylist2@email.com",
     userType: "stylist"
   }
 ];
