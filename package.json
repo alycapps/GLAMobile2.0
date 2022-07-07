@@ -36,7 +36,7 @@
     "express-session": "^1.15.6",
     "if-env": "^1.0.4",
     "mapbox-gl": "^0.51.0-beta.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.26",
     "mongoose": "^5.3.4",
     "morgan": "^1.9.1",
